@@ -15,6 +15,8 @@
     />
   </head>
   <body>
+    
+    </div>
     <div class="header" id="home ">
       <div class="container">
         <div class="nav-bar">
@@ -127,12 +129,27 @@
 
     <!-- Start Offers -->
     <div class="offers" id="offers">
+      <div class="container">
       <h2>Special Offers</h2>
       <p>
         Get 30% off on your first international trip. Enjoy premium hotels, fast
         flights, and memorable destinations.
       </p>
       <button class="btn">Book Now</button>
+      </div>
+      <div id="offersModal" class="modal-overlay">
+  <div class="modal-box">
+    <button class="modal-close" id="modalClose">✕</button>
+    <h3>Special Offer 🎉</h3>
+    <p>Get <strong>30% off</strong> on your first international trip!</p>
+    <ul>
+      <li>✈️ Fast flights</li>
+      <li>🏨 Premium hotels</li>
+      <li>🌍 Memorable destinations</li>
+    </ul>
+    <button class="btn" id="claimBtn">Claim Offer</button>
+  </div>
+</div>
     </div>
     <!-- End Offers -->
 
@@ -140,10 +157,16 @@
     <div class="contact-container" id="contact">
       <h2>Contact Us</h2>
       <form action="" class="contact" id="contactForm">
-        <input type="text" placeholder="Your Name" id="name" />
+        <input type="text" placeholder="Your Name" id="yourName" />
         <input type="email" placeholder="Email Address" id="email" />
         <textarea rows="5" placeholder="Your Message" id="message"></textarea>
         <button class="btn">Send Message</button>
+        <hr />
+        <div class="sign">
+          <a href="login.html" class="singn-in">Log In</a>
+          <span class="span">or</span>
+          <a href="signup.html" class="sign-up">Sign Up</a>
+        </div>
       </form>
     </div>
     <!-- End Contact -->
@@ -167,7 +190,12 @@
       </ul>
     </div>
     <!-- End Footer -->
-
+<div id="customAlert" class="alert-overlay">
+      <div class="alert-box">
+        <p id="alertMessage"></p>
+        <button id="alertOk">OK</button>
+      </div>
     <script src="js/script.js" type="module"></script>
+    <script></script>
   </body>
 </html>
