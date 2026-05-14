@@ -66,7 +66,9 @@ function dataUser(yourName, email, message, onSuccess) {
   get(usersRef)
     .then((snapshot) => {
       if (!snapshot.exists()) {
-        showAlert("No users found. Please sign up.", () => {});
+        showAlert("No users found. Please sign up.", () => {
+          contactForm.reset();
+        });
         return;
       }
 
