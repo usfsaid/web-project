@@ -3,6 +3,8 @@ import { database } from "./config.js";
 import {
   ref,
   set,
+  get,
+  child,
 } from "https://www.gstatic.com/firebasejs/10.11.0/firebase-database.js";
 
 // Custom alert function
@@ -20,7 +22,7 @@ function showAlert(message, callback) {
   };
 }
 
-//Functions
+Functions;
 function writeUserData(
   userId,
   yourName,
@@ -54,9 +56,11 @@ function writeUserData(
       });
       return;
     } else if (userId === userId && email === email && userName === userName) {
-      showAlert("User already exists! Please log in.", () => {
-        window.location.href = "login.html";
-      });
+      if (password === confirmPassword) {
+        showAlert("User already exists! Please log in.", () => {
+          window.location.href = "login.html";
+        });
+      }
     } else {
       showAlert("User registered successfully!", () => {
         window.location.href = "index.html";

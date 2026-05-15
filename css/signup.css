@@ -86,13 +86,7 @@ body {
   padding: 30px;
   background-color: var(--background-color);
 }
-@media (max-width: 768px) {
-  .container-signup .form-signup {
-    width: 90%;
-    height: 65vh;
-    transform: translate(-50%, -5%);
-  }
-}
+
 .container-signup .form-signup h1 {
   font-size: 32px;
   font-weight: bold;
@@ -168,4 +162,48 @@ body {
 }
 .contact-container {
   padding: 50px 20px;
+}
+@media (max-width: 767px) {
+  .container-signup .form-signup h1 {
+    font-size: 22px;
+  }
+  .container-login .form-login h1 span {
+    font-size: 30px;
+  }
+  .container-signup .form-signup {
+    width: 80%;
+    height: 60vh;
+  }
+  .landing-sign {
+    height: 50vh;
+  }
+  .container-signup .form-signup form label {
+    font-size: 10px;
+    padding: 5px;
+  }
+  .container-signup .form-signup form input {
+    padding: 6px;
+    border: 1px solid var(--primary-color);
+    border-radius: 50px;
+    outline: none;
+    font-size: 10px;
+    margin-bottom: 8px;
+  }
+  .container-signup .form-signup form button {
+    padding: 10px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 50px;
+    font-size: 10px;
+    cursor: pointer;
+    background-color: var(--primary-color);
+    color: #fff;
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  .container-signup .form-signup {
+    width: 50%;
+    height: 85vh;
+    transform: translate(-50%, -5%);
+  }
 }
