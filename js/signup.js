@@ -71,6 +71,7 @@ function writeUserData(
           email: email,
           userName: userName,
           password: password,
+          confirmPassword: confirmPassword,
         }).then(() => {
           showAlert("User registered successfully!", () => {
             window.location.href = "index.html";
